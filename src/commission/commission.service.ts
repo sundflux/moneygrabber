@@ -26,7 +26,7 @@ export class CommissionService {
    * 
    * @returns 
    */
-  fetchCurrencyExchangeRate(): any {
+  fetchCurrencyExchangeRate(): CurrencyRatesResponseTdo {
     const fs = require('fs');
     const cached = fs.readFileSync('./dist/currency-rates-cached.json');
     const json: CurrencyRatesResponseTdo = JSON.parse(cached);
